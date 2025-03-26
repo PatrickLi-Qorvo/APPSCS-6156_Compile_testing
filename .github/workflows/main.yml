@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - name: Check out repo
+      uses: action/checkout@v4
+      
     - name: list out the file
       run: ls ${{ github.workspace }}
       
