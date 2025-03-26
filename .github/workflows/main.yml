@@ -10,8 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - name: list out the folder
-      run: ls -a
+    - uses: actions/checkout@v2
       
     - name: Cloning the Qorvo Branch
       run: source test/script/setup/clone_sdk.sh
