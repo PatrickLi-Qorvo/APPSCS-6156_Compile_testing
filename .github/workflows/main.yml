@@ -1,0 +1,19 @@
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_test:
+    name: run Testing
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Cloning the Qorvo Branch
+      run: source ${GITHUB_WORKSPACE}/test/script/setup/clone_sdk.sh
+      
+    - name: activate
+      run: source ${GITHUB_WORKSPACE}/test/script/setup/activate.sh
+      
+      
