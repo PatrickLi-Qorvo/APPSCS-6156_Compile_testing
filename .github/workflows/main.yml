@@ -10,12 +10,10 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v2
-      
     - name: Cloning the Qorvo Branch
-      run: source test/script/setup/clone_sdk.sh
+      run: source ${{ github.workspace }}test/script/setup/clone_sdk.sh
       
     - name: activate
-      run: source test/script/setup/activate.sh
+      run: source ${{ github.workspace }}test/script/setup/activate.sh
       
       
