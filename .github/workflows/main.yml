@@ -11,9 +11,9 @@ jobs:
 
     steps:
     - name: Cloning the Qorvo Branch
-      run: source ${GITHUB_WORKSPACE}/test/script/setup/clone_sdk.sh
+      run: source ${GITHUB_WORKSPACE}/../test/script/setup/clone_sdk.sh
       
     - name: activate
-      run: source ${GITHUB_WORKSPACE}/test/script/setup/activate.sh
+      run: source ${GITHUB_WORKSPACE}/../test/script/setup/activate.sh
       
       
