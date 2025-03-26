@@ -12,12 +12,17 @@ jobs:
     steps:
     - name: Check out repo
       uses: actions/checkout@v4
-      
+
     - name: list out the file
       run: ls ${{ github.workspace }}
-      
-    - name: Run docker
-      run: source ${{ github.workspace }}/test/scripts/docker/run.sh
+
+    - name: Set the secret key
+      with: # Set the secret as an input
+        super_secret: ${{ secrets.SuperSecret }}
+      env: # Or as an environment variable
+        super_secret: ${{ secrets.SuperSecret }}
+#    - name: Run docker
+#     run: source ${{ github.workspace }}/test/scripts/docker/run.sh
       
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
