@@ -17,9 +17,9 @@ jobs:
       run: ls ${{ github.workspace }}
       
     - name: Cloning the Qorvo Branch
-      run: source ${{ github.workspace }}/test/script/setup/clone_sdk.sh
+      run: source ${{ github.workspace }}/../test/script/setup/clone_sdk.sh
       
     - name: activate
-      run: source ${{ github.workspace }}/test/script/setup/activate.sh
+      run: source ${{ github.workspace }}/../test/script/setup/activate.sh
       
       
