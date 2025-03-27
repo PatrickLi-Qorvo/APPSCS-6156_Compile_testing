@@ -18,7 +18,7 @@ jobs:
 
     - name: Cloning the ikea branch
       run: |
-        cd source ${{ github.workspace }}
+        cd ${{ github.workspace }}
         git clone -b 0.8.3 git@gitlab.com:qorvo/wcon/lps_sw/iot_sdk_ikea.git ikea_0_8_3_branch
       env:  
         TOKEN: ${{ secrets.QORVO_SDK_ACCESS_TOKEN }}
