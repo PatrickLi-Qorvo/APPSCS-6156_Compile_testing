@@ -19,7 +19,7 @@ jobs:
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
       env:  
-        token : ${{ secrets.EXTERNAL_TOKEN }}
+        token : ${{ secrets.QORVO_SDK_ACCESS_TOKEN }}
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
