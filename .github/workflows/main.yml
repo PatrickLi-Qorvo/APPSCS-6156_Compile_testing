@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Check out repo
       uses: actions/checkout@v4
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
 
     - name: list out the file
       run: ls ${{ github.workspace }}
@@ -23,8 +25,8 @@ jobs:
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
 #      with: # Set the secret as an input
 #        super_secret: ${{ secrets.SuperSecret }}
-      env: # Or as an environment variable
-        super_secret: ${{ secrets.SuperSecret }}
+#     env: # Or as an environment variable
+#       super_secret: ${{ secrets.SuperSecret }}
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
