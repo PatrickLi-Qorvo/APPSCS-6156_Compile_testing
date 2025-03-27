@@ -23,10 +23,8 @@ jobs:
       
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
-#      with: # Set the secret as an input
-#        super_secret: ${{ secrets.SuperSecret }}
-#     env: # Or as an environment variable
-#       super_secret: ${{ secrets.SuperSecret }}
+      env:  
+        EXTERNAL_TOKEN : ${{ secrets.EXTERNAL_TOKEN }}
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
