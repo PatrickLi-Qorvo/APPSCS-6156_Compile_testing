@@ -15,24 +15,11 @@ jobs:
 
     - name: list out the file
       run: ls ${{ github.workspace }}
-
-    - name: Cloning the ikea branch
-      run: |
-        cd ${{ github.workspace }}
-        git clone -b 0.8.3 git@gitlab.com:qorvo/wcon/lps_sw/iot_sdk_ikea.git ikea_0_8_3_branch
-      env:  
-        QORVO_SDK_ACCESS_TOKEN: ${{ secrets.QORVO_SDK_ACCESS_TOKEN }}
-
-    - name: Remove the branch
-      run: |
-        rm -rf ikea_0_8_3_branch
    
-#    - name: Cloning the Qorvo Branch
-#      run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
-#      env:  
-#        TOKEN: ${{ secrets.QORVO_SDK_ACCESS_TOKEN }}
+    - name: Cloning the Qorvo Branch
+      run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
       
-#    - name: activate
-#      run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
+    - name: activate
+      run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
       
       
