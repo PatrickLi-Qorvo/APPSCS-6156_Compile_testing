@@ -17,10 +17,10 @@ jobs:
       run: ls ${{ github.workspace }}
    
     - name: Cloning the Qorvo Branch
-      run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
+      run: source ${{ github.workspace }}/test/sdk/scripts/setup/clone_sdk.sh
       
     - name: activate
-      run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
+      run: source ${{ github.workspace }}/test/sdk/scripts/setup/activate.sh
 
     - name: Make ComboSwitch Hex
       run: |
