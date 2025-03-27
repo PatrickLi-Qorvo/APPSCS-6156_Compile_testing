@@ -21,5 +21,10 @@ jobs:
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
+
+    - name: Make ComboSwitch Hex
+      run: |
+        make -f Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified clean
+        make -f Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified
       
       
