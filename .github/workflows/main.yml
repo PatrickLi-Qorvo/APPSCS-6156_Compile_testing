@@ -24,7 +24,7 @@ jobs:
 
     - name: Make ComboSwitch Hex
       run: |
-        make -f Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified clean
-        make -f Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified
+        make -f ${{ github.workspace }}/test/Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified clean
+        make -f ${{ github.workspace }}/test/Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified
       
       
