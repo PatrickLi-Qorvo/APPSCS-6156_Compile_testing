@@ -13,23 +13,13 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v4
 
-    - name: Create ssh key
-      run: |
-          mkdir -p ~/.ssh/
-          echo "$DO_GITHUB_PRIVATE_KEY" > ../github_do.key
-          sudo chmod 600 ../github_do.key
-          ssh-keyscan -H ${{secrets.DEPLOY_SERVER}} > ~/.ssh/known_hosts
-      shell: bash
-      env:
-          DO_GITHUB_PRIVATE_KEY: ${{secrets.DO_GITHUB_PRIVATE_KEY}}
-
     - name: list out the file
       run: ls ${{ github.workspace }}
    
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
-#      env:  
-#        EXTERNAL_TOKEN : ${{ secrets.EXTERNAL_TOKEN }}
+      env:  
+        token : ${{ secrets.EXTERNAL_TOKEN }}
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
