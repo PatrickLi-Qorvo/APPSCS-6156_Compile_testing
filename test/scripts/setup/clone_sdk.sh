@@ -38,6 +38,10 @@ if [ -f ${SDK_TOKEN_FILE} ]; then
     SDK_HTTP_URL=https://oauth2:${SDK_TOKEN}@gitlab.com/qorvo/wcon/lps_sw/iot_sdk_ikea.git
 fi
 
+echo "Start to clone iot_sdk_ikea ${SDK_VERSION}"
+git clone -b ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
+
+'
 if [ ! -d ${SDK_PATH} ]; then
     echo "Clone iot_sdk_ikea ${SDK_VERSION}"
     if [ "${SMALLEST_SDK}" == 0 ]; then
@@ -67,3 +71,4 @@ if [ -d ${SDK_PATH} ]; then
         source ${SCRIPT_PATH}/redirect_submodules.sh
     fi
 fi
+'
