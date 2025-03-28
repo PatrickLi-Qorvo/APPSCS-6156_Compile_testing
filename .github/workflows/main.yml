@@ -14,7 +14,7 @@ jobs:
       uses: AdityaGarg8/remove-unwanted-software@v5
       with:
         remove-android: 'true'
-        remove-cached-tools: 'true'
+#        remove-cached-tools: 'true'
         
     
     - name: Check out repo
