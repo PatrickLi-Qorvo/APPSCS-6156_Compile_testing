@@ -11,9 +11,11 @@ jobs:
 
     steps: 
     - name: Maximize runner disk
-      uses: gmij/max-build-space@main
+      uses: AdityaGarg8/remove-unwanted-software@v5
       with:
         remove-android: 'true'
+        remove-cached-tools: 'true'
+        
     
     - name: Check out repo
       uses: actions/checkout@v4
