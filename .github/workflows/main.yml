@@ -13,8 +13,6 @@ jobs:
     - name: Maximize runner disk
       uses: gmij/max-build-space@main
       with:
-        root-reserve-mb: 512
-        swap-size-mb: 10240
         remove-android: 'true'
     
     - name: Check out repo
