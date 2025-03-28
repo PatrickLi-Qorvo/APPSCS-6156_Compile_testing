@@ -11,7 +11,7 @@ jobs:
 
     steps:   
     - name: Maximize runner disk
-      uses: ./.github/action/maximize-runner-disk
+      uses: ./.github/actions/maximize-runner-disk
       
     - name: Check out repo
       uses: actions/checkout@v4
