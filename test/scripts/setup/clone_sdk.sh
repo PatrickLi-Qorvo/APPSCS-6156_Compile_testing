@@ -40,7 +40,7 @@ fi
 
 echo "Start to clone iot_sdk_ikea ${SDK_VERSION}"
 git clone -b ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
-
+source ${SCRIPT_PATH}/redirect_submodules.sh
 
 #if [ ! -d ${SDK_PATH} ]; then
 #    echo "Clone iot_sdk_ikea ${SDK_VERSION}"
