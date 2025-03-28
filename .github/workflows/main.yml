@@ -11,7 +11,9 @@ jobs:
 
     steps:
     - name: Check out repo
-      uses: actions/checkout@v4
+      uses: |
+        actions/checkout@v4
+        ./.github/action/maximize-runner-disk
 
     - name: list out the file
       run: ls ${{ github.workspace }}
