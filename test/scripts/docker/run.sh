@@ -21,7 +21,7 @@ else
 fi
 
 echo "Running Docker container with command: $CMD"
-docker run -it --rm \
+docker run -i --rm \
   -v "$PROJECT_ROOT:/workspace" \
   "$IMAGE_NAME:$IMAGE_TAG" \
   $CMD
