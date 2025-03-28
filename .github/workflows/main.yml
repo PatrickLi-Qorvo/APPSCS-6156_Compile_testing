@@ -14,7 +14,12 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Maximize runner disk
-      uses: ./.github/actions/maximize-runner-disk
+      uses: gmij/max-build-space@main
+      with:
+        root-reserve-mb: 512
+        swap-size-mb: 1024
+        remove-android: 'true'
+        remove-dotnet: 'true'
 
     - name: list out the file
       run: ls ${{ github.workspace }}
