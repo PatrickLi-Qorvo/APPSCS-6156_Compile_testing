@@ -41,34 +41,34 @@ fi
 echo "Start to clone iot_sdk_ikea ${SDK_VERSION}"
 git clone -b ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
 
-'
-if [ ! -d ${SDK_PATH} ]; then
-    echo "Clone iot_sdk_ikea ${SDK_VERSION}"
-    if [ "${SMALLEST_SDK}" == 0 ]; then
-        if [ ! -n "$SDK_TOKEN" ]; then
-            echo ${SDK_SSH_URL}
-            git clone --branch ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
-        else
-            echo ${SDK_HTTP_URL}
-            git clone --branch ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
-        fi
-    else
-        if [ ! -n "$SDK_TOKEN" ]; then
-            echo ${SDK_SSH_URL}
-            git clone --depth 1 --branch ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
-        else
-            echo ${SDK_HTTP_URL}
-            git clone --depth 1 --branch ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
-        fi
-    fi
-else
-    echo "iot_sdk_ikea ${SDK_VERSION} already installed"
-fi
 
-if [ -d ${SDK_PATH} ]; then
-    if [ -n "$SDK_TOKEN" ]; then
-        echo "Redirect submodules"
-        source ${SCRIPT_PATH}/redirect_submodules.sh
-    fi
-fi
-'
+#if [ ! -d ${SDK_PATH} ]; then
+#    echo "Clone iot_sdk_ikea ${SDK_VERSION}"
+#    if [ "${SMALLEST_SDK}" == 0 ]; then
+#        if [ ! -n "$SDK_TOKEN" ]; then
+#            echo ${SDK_SSH_URL}
+#            git clone --branch ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
+#        else
+#            echo ${SDK_HTTP_URL}
+#            git clone --branch ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
+#        fi
+#    else
+#        if [ ! -n "$SDK_TOKEN" ]; then
+#            echo ${SDK_SSH_URL}
+#            git clone --depth 1 --branch ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
+#        else
+#            echo ${SDK_HTTP_URL}
+#            git clone --depth 1 --branch ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
+#        fi
+#    fi
+#else
+#    echo "iot_sdk_ikea ${SDK_VERSION} already installed"
+#fi
+#
+#if [ -d ${SDK_PATH} ]; then
+#    if [ -n "$SDK_TOKEN" ]; then
+#        echo "Redirect submodules"
+#        source ${SCRIPT_PATH}/redirect_submodules.sh
+#    fi
+#fi
+
