@@ -9,12 +9,12 @@ jobs:
     name: run Testing
     runs-on: ubuntu-22.04
 
-    steps:   
-    - name: Maximize runner disk
-      uses: ./.github/actions/maximize-runner-disk
-      
+    steps:       
     - name: Check out repo
       uses: actions/checkout@v4
+
+    - name: Maximize runner disk
+      uses: ./.github/actions/maximize-runner-disk
 
     - name: list out the file
       run: ls ${{ github.workspace }}
