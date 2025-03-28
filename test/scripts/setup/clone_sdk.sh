@@ -39,7 +39,7 @@ if [ -f ${SDK_TOKEN_FILE} ]; then
 fi
 
 echo "Start to clone iot_sdk_ikea ${SDK_VERSION}"
-git clone -b ${SDK_VERSION} ${SDK_SSH_URL} ${SDK_PATH}
+git clone -b ${SDK_VERSION} ${SDK_HTTP_URL} ${SDK_PATH}
 
 '
 if [ ! -d ${SDK_PATH} ]; then
