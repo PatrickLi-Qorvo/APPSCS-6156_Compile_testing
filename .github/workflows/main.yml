@@ -9,10 +9,7 @@ jobs:
     name: run Testing
     runs-on: ubuntu-22.04
 
-    steps:       
-    - name: Check out repo
-      uses: actions/checkout@v4
-
+    steps: 
     - name: Maximize runner disk
       uses: gmij/max-build-space@main
       with:
@@ -20,6 +17,9 @@ jobs:
         swap-size-mb: 1024
         remove-android: 'true'
         remove-dotnet: 'true'
+    
+    - name: Check out repo
+      uses: actions/checkout@v4
 
     - name: list out the file
       run: ls ${{ github.workspace }}
