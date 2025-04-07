@@ -23,6 +23,10 @@ jobs:
     - name: list out the file
       run: ls ${{ github.workspace }}
 
+    - name: Fulfill some package
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install gcc-arm-none-eabi
 #    - name: Running the docker
 #      run: source ${{ github.workspace }}/test/scripts/docker/run.sh
       
