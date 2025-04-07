@@ -35,11 +35,6 @@ jobs:
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
-
-    - name: checking
-      run: |
-        ls /usr/bin/
-        ls /usr/bin/arm-none-eabi-gcc
         
     - name: Make ComboSwitch Hex
       run: |
