@@ -8,8 +8,6 @@ if [ ! -d ${SDK_PATH} ]; then
 fi
 
 echo "Setup Matter environment"
-cp ${SCRIPT_PATH}/bootstrap_testing.diff ${SDK_PATH}
 cd ${SDK_PATH}
-git apply bootstrap_testing.diff
 source ./Scripts/activate.sh
 cd -
