@@ -20,9 +20,6 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v4
 
-    - name: list out the file
-      run: ls ${{ github.workspace }}
-
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
       
