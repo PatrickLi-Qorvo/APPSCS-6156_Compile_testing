@@ -13,7 +13,7 @@ jobs:
     - name: Maximize runner disk
       uses: AdityaGarg8/remove-unwanted-software@v5
       with:
-        remove-android: 'true'
+        remove-haskell: 'true'
 #        remove-cached-tools: 'true'
         
     
