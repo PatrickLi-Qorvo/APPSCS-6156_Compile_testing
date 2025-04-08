@@ -7,9 +7,13 @@ if [ ! -d ${SDK_PATH} ]; then
     source ${SCRIPT_PATH}/lone_sdk.sh
 fi
 
-echo "Setup Matter environment"
+echo ""
+echo "#############################################Setup Matter environment####################################################"
 cd ${SDK_PATH}
 source ./Scripts/activate.sh
 
-echo "Make Combo_Switch Hex"
+echo ""
+echo ""
+echo ""
+echo "##############################################Make Combo_Switch Hex#######################################################"
 make -f Applications/Combo/Switch/Makefile.Switch_Combo_qpg6200_thread_certified
