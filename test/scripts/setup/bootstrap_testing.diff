@@ -1,0 +1,43 @@
+diff --git a/Scripts/bootstrap.sh b/Scripts/bootstrap.sh
+index 0f087bc..ee090f2 100755
+--- a/Scripts/bootstrap.sh
++++ b/Scripts/bootstrap.sh
+@@ -52,7 +52,7 @@ install_zap_dependencies ()
+ 
+ install_arm_gcc_emb ()
+ {
+-    sudo apt install -y bzip2 tar xz-utils
++    sudo apt-get install -y bzip2 tar xz-utils
+     wget -P /tmp --progress=dot:giga https://developer.arm.com/-/media/Files/downloads/gnu/12.2.mpacbti-rel1/binrel/arm-gnu-toolchain-12.2.mpacbti-rel1-x86_64-arm-none-eabi.tar.xz
+     sudo mkdir -p /opt/TOOL_ARMGCCEMB
+     sudo tar -xf /tmp/arm-gnu-toolchain-12.2.mpacbti-rel1-x86_64-arm-none-eabi.tar.xz -C /opt/TOOL_ARMGCCEMB
+@@ -61,7 +61,7 @@ install_arm_gcc_emb ()
+ 
+ install_gn ()
+ {
+-	sudo apt install unzip
++	sudo apt-get install unzip
+ 	local curDir="${PWD}"
+ 	mkdir -p "$BOOTSTRAP_TMP_PATH/gn"
+ 	cd "$BOOTSTRAP_TMP_PATH/gn" || (bootstrap_sh_failure "chdir to $BOOTSTRAP_TMP_PATH/gn failed"; exit 1)
+@@ -91,9 +91,9 @@ setup_venv ()
+         sudo apt-get update
+     fi
+ 
+-    sudo apt install -y python3.9 python3.9-dev gcc
++    sudo apt-get install -y python3.9 python3.9-dev gcc
+     # required for gn exec_script
+-    sudo apt install -y python-is-python3
++    sudo apt-get install -y python-is-python3
+     #check openssl minversion
+     export openssl_minversion=1.1.1
+     # if minversion is not the first in the result, install the deb file
+@@ -199,7 +199,7 @@ install_zap()
+     sudo mkdir -p "${ZAP_INSTALL_PATH}"
+     cd "${ZAP_INSTALL_PATH}"
+     sudo wget --progress=dot:giga "https://github.com/project-chip/zap/releases/download/${ZAP_VERSION}/zap-linux-x64.zip"
+-    sudo apt install unzip
++    sudo apt-get install unzip
+     sudo unzip -o zap-linux-x64.zip
+     sudo rm zap-linux-x64.zip
+     # keep zap UI (don't delete it)
