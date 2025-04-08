@@ -23,13 +23,9 @@ jobs:
     - name: list out the file
       run: ls ${{ github.workspace }}
 
-#    - name: Running the docker
-#      run: source ${{ github.workspace }}/test/scripts/docker/run.sh
+    - name: Running the docker
+      run: source ${{ github.workspace }}/test/scripts/docker/run.sh
 
-    - name: install some add-in
-      run: |
-        sudo apt-get install ccache
-        
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
       
