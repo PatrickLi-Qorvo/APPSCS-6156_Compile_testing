@@ -23,9 +23,6 @@ jobs:
     - name: list out the file
       run: ls ${{ github.workspace }}
 
-    - name: Running the docker
-      run: source ${{ github.workspace }}/test/scripts/docker/run.sh
-
     - name: Cloning the Qorvo Branch
       run: source ${{ github.workspace }}/test/scripts/setup/clone_sdk.sh
       
