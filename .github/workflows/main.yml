@@ -35,6 +35,9 @@ jobs:
       
     - name: activate
       run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
+
+    - name: activate _2
+      run: source ${{ github.workspace }}/test/scripts/setup/activate.sh
         
     - name: Make ComboSwitch Hex
       run: |
